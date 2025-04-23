@@ -2,7 +2,6 @@
     "clockify.tracking.projectId": "634e2a5516c2d15dab874102",
     "clockify.tracking.workspaceId": "62b3c10a4f583f1a94bbc55b",
     "files.exclude": {
-        "**/.next": true,
         "**/*.gitattributes": true,
         "**/*.gitignore": true,
         "**/node_modules": true
