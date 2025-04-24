@@ -130,3 +130,4 @@ dist
 .pnp.*
 .DS_Store
 package-lock.json
+.firebase/hosting.b3V0.cache
