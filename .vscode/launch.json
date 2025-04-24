@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Start Next.js (F5)",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm run dev",
+            "preLaunchTask": "open-browser"
+        }
+    ]
+}
