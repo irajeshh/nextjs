@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 // in your file
-import * as W from "../Widgets/Widgets";
+import * as W from "../../Widgets/Widgets";
 
 export default function Counter() {
     const [count, setCount] = useState(0);
