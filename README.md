@@ -1,4 +1,6 @@
-# Next.js Server Side Rendering & Client Side Rendering Test Project in Flutter Pattern Widgets.
+# Next.js Server Side Rendering & Client Side Rendering Test Project (But in Flutter Widgets Style UI)
+![image](https://github.com/user-attachments/assets/88a37d1b-afbb-4d28-b3d8-4f13b46286ab)
+
 
 #Why?
 As a flutter developer, I'm currently implementing server side rendering using cloud functions to satisfy SEO using node js, but
@@ -23,12 +25,16 @@ As a Flutter developer, I aim to convert existing Next.js components into Flutte
 - When a user navigates to a page directly from the homepage using a link:
   - A `loading.js` component is displayed until the products are fully loaded.
   - This behavior mimics Flutter's `go_router` in Single Page Web Apps.
+     Content I want the user to see:
+     ![image](https://github.com/user-attachments/assets/b6ab2e52-5264-4f4c-ac3f-2809a5024745)
 
 ### Case 2: Bot Crawling
 - When a bot accesses a URL directly (e.g., `https://nextjs-three-rouge-16.vercel.app/products`):
   - In the browser, users will see a loading shimmer skeleton.
   - However, bots will read the fully rendered page, including all products.
   - The "Loading Circular Progress Indicator" in the favicon area simulates a native `.html` page loading experience.
+     Content I want the bot to see:
+     ![image](https://github.com/user-attachments/assets/e9c20f89-9df7-4225-8ae8-b83269868a77)
 
 ---
 
@@ -40,17 +46,7 @@ To verify that the page is fully rendered before being shown to bots:
    - Paste the URL (e.g., `https://nextjs-three-rouge-16.vercel.app/products` or `https://nextjs-three-rouge-16.vercel.app/products/1`).
    - Click **"View Tested Page"**.
    - Navigate to the **SCREENSHOT** tab to see the fully rendered page with all products.
-   
-     Content I want the user to see:
-
-     ![image](https://github.com/user-attachments/assets/b6ab2e52-5264-4f4c-ac3f-2809a5024745)
   
-     Content I want the bot to see:
-
-     ![image](https://github.com/user-attachments/assets/e9c20f89-9df7-4225-8ae8-b83269868a77)
-
-
-
 
 2. Use [PageSpeed Insights](https://pagespeed.web.dev):
    - Analyze the page and review the screenshot to confirm full rendering.
