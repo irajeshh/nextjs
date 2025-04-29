@@ -1,6 +1,5 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import * as W from '@/Widgets/Widgets';
 
 // HomePage to test both synchronous and asynchronous page loading
@@ -8,7 +7,7 @@ export default function HomePage() {
   // const router = useRouter();
   return (
     <W.Column>
-      <W.Txt text="Welcome to the Store v0.1.1" isBold={true} fontSize={80} />
+      <W.Txt text="Welcome to the Store" isBold={true} fontSize={80} />
       {/* Asynchronous action page which will be shown only after loading the products from repository */}
       <W.Linker
         text="View Products"
