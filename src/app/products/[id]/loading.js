@@ -3,7 +3,7 @@
 export default function Loading() {
     return (
         <div className="max-w-2xl mx-auto p-6">
-            <h1 className="text-2xl mb-4">Loading will take 20 seconds fake delay...</h1>
+            <h1 className="text-2xl mb-4">Loading will take 10 seconds fake delay...</h1>
             <div className="animate-pulse space-y-4">
                 {/* Shimmer Skeleton for Title */}
                 <div className="h-6 bg-gray-300 rounded w-3/4"></div>

@@ -10,7 +10,7 @@ const products = [
 ];
 export function getAllProducts() {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(products), 20000); // 20 sec delay
+        setTimeout(() => resolve(products), 10000); // 10 sec delay
     });
 }
 
