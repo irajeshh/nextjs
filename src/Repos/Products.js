@@ -10,7 +10,7 @@ const products = [
 ];
 export function getAllProducts() {
     return new Promise((resolve) => {
-        setTimeout(() => resolve(products), 3000); // 5 sec delay
+        setTimeout(() => resolve(products), 20000); // 20 sec delay
     });
 }
 
@@ -18,6 +18,6 @@ export function getProductById(id) {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find((p) => p.id === id));
-        }, 2000); // 3 sec delay
+        }, 10000); // 10 sec delay
     });
 }
