@@ -3,7 +3,8 @@
 import { useState } from "react";
 // in your file
 import * as W from "../../Widgets/Widgets";
-
+// A simlple page which never loads anything from repository or API,
+// so it will be shown immediately
 export default function Counter() {
     const [count, setCount] = useState(0);
 

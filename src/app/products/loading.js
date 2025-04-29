@@ -1,3 +1,5 @@
+//If this file is deleted, then user will see like a freezing page until the
+// data is loaded from the repository or API.
 export default function Loading() {
     return (
         <div className="p-4">

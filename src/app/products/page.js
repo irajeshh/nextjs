@@ -1,6 +1,8 @@
 import Link from 'next/link'; // Import Link from Next.js
 import { getAllProducts } from '@/Repos/Products';
 
+///Primary page which depends upon the repository API
+/// and will be shown only after loading the products from repository
 export default async function ProductsPage() {
     const products = await getAllProducts();
 
