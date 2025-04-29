@@ -2,25 +2,32 @@
 
 import * as W from '@/Widgets/Widgets';
 
-// HomePage to test both synchronous and asynchronous page loading
 export default function HomePage() {
-  // const router = useRouter();
   return (
-    <W.Column>
-      <W.Txt text="Welcome to the Store" isBold={true} fontSize={80} />
-      {/* Asynchronous action page which will be shown only after loading the products from repository */}
-      <W.Linker
-        text="View Products"
-        href="/products"
-        openInNewTab={false}
-      />
-      {/* Synchronos page which has nothing to load from repository or API to show, so it will be immediately shown */}
-      <W.Linker
-        text="View Counter"
-        href="/counter"
-        openInNewTab={false}
-      />
+    <div className="min-h-screen flex items-center justify-center p-6">
+      <W.Column className="items-center space-y-8">
+        <W.Txt
+          text="Welcome to the Store"
+          isBold={true}
+          fontSize={48}
+          className="text-center"
+        />
 
-    </W.Column>
+        <div className="flex flex-col items-center gap-6">
+          <W.Linker
+            text="🛒 View Products"
+            href="/products"
+            openInNewTab={false}
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          />
+          <W.Linker
+            text="🔢 View Counter"
+            href="/counter"
+            openInNewTab={false}
+            className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+          />
+        </div>
+      </W.Column>
+    </div>
   );
 }
