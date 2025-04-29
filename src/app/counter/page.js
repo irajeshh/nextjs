@@ -24,14 +24,13 @@ export default function Counter() {
             <W.Txt text={`This is my sample text with font size 18`} fontSize={28}></W.Txt>
             <W.Row>
                 <W.Button
-                    onClick={increment}
-                    customLabel="Increment"
-                    isIncrement={true}
+                    onClick={decrement}
+                    isIncrement={false}
                 />
                 <W.Button
-                    onClick={decrement}
-                    // customLabel="Decrement"
-                    isIncrement={false}
+                    onClick={increment}
+                    customLabel="Custom button text to Increment"
+                    isIncrement={true}
                 />
             </W.Row>
         </W.Column>
