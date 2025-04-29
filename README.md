@@ -1,4 +1,8 @@
 # Next.js Server Side Rendering & Client Side Rendering Test Project (But in Flutter Widgets Style UI)
+
+https://youtu.be/ROSVEZAQKQA
+
+
 ![image](https://github.com/user-attachments/assets/88a37d1b-afbb-4d28-b3d8-4f13b46286ab)
 
 
