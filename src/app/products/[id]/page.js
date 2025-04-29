@@ -1,26 +1,55 @@
 import { getProductById } from '@/Repos/Products';
-
-export const dynamic = 'force-dynamic'; // Ensures dynamic rendering
+import { Center } from '@/Widgets/Center';
+import { Column } from '@/Widgets/Column';
+import { Txt } from '@/Widgets/Txt';
+export const dynamic = 'force-dynamic';
 
 export default async function ProductDetail({ params }) {
-    const { id } = params;
+    const { id } = await params; 
     const product = await getProductById(id);
+    if (!product) return _productNotFound();
+    return _detailsUI(product);
+}
 
-    if (!product) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <h1 className="text-2xl font-bold text-red-600">Product not found</h1>
-            </div>
-        );
-    }
 
+export function _detailsUI(product) {
     return (
-        <div className="max-w-4xl mx-auto p-8">
-            <h1 className="text-4xl font-bold mb-6 text-center">{product.name}</h1>
-            <div className="bg-white shadow-lg rounded-lg p-6 space-y-4">
-                <p className="text-lg text-gray-700">{product.description}</p>
-                <p className="text-sm text-gray-500">Product ID: {product.id}</p>
-            </div>
-        </div>
+        <Column
+            children={<>
+                <Txt
+                    text={product.name}
+                    isBold={true}
+                    fontSize={48}
+                    center={true}
+                />
+                <Txt
+                    text={product.description}
+                    fontSize={24}
+                    center={true}
+                />
+                <Txt
+                    text={product.id}
+                    fontSize={12}
+                    center={true}
+                />
+            </>
+            }
+        />
+    );
+}
+
+export function _productNotFound() {
+    return (
+        <Center
+            child={
+                <Txt
+                text={"Product not found"}
+                isBold={true}
+                fontSize={48}
+                center={true}
+
+                />
+            }
+        />
     );
 }
