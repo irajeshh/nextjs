@@ -4,8 +4,8 @@ import * as W from '@/Widgets/Widgets';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      <W.Column className="items-center space-y-8">
+    <W.Center>
+      <W.Column>
         <W.Txt
           text="Welcome to the Store"
           isBold={true}
@@ -15,7 +15,7 @@ export default function HomePage() {
 
         <div className="flex flex-col items-center gap-6">
           <W.Linker
-            text="🛒 View Products"
+            text="🛒 View Products list"
             href="/products"
             openInNewTab={false}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
@@ -28,6 +28,6 @@ export default function HomePage() {
           />
         </div>
       </W.Column>
-    </div>
+    </W.Center>
   );
 }
